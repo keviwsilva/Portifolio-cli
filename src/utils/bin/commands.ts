@@ -11,7 +11,7 @@ export const help = async (args: string[]): Promise<string> => {
     if (i % 7 === 0) {
       c += Object.keys(bin).sort()[i - 1] + '\n';
     } else {
-      c += Object.keys(bin).sort()[i - 1] + ' ';
+      c += Object.keys(bin).sort()[i - 1] + ' \n';
     }
   }
   return `Welcome! Here are all the available commands:
@@ -30,11 +30,11 @@ export const repo = async (args: string[]): Promise<string> => {
 
 // About
 export const about = async (args: string[]): Promise<string> => {
-  return `Hi, I am ${config.name}. 
-Welcome to my website!
-More about me:
-'sumfetch' - short summary.
-'resume' - my latest resume.
+  return `Oi, eu sou o ${config.name}. 
+Bem vindo ao meu repositório!
+Mais sobre mim:
+'sumfetch' - sumário pequeno.
+'resume' - meu curriculo.
 'readme' - my github readme.`;
 };
 
@@ -43,13 +43,34 @@ export const resume = async (args: string[]): Promise<string> => {
   return 'Opening resume...';
 };
 
-// Donate
-export const donate = async (args: string[]): Promise<string> => {
-  return `thank you for your interest. 
-here are the ways you can support my work:
-- <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.donate_urls.paypal}" target="_blank">paypal</a></u>
-- <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.donate_urls.patreon}" target="_blank">patreon</a></u>
-`;
+
+
+export const projetos = async (args: string[]): Promise<string> => {
+  return `
+Escolha o projeto e escreva: "project 'número do projeto'" 
+  \n 
+  <div class='projetos' style="display: flex; flex-wrap: wrap; flex-direction: column; gap:15px;">
+  <div>
+  1. Projeto Patrify: 
+<img class="project-img"src="../../../patrify.png" width="230px">
+  </div>
+  <div>
+2. Projeto email-sender: 
+<img class="project-img"src="../../../emailsender.png" width="230px">
+  </div>
+  <div>
+3. Projeto Shadow-Search: 
+<img class="project-img"src="../../../shadowsearch.png" width="260px">
+</div>     
+</div> 
+ <style>
+    @media (max-width: 600px) {
+      
+      .project-img {
+        width: 75vw;
+      }
+    }
+  </style>`;
 };
 
 // Contact
@@ -73,6 +94,11 @@ export const linkedin = async (args: string[]): Promise<string> => {
 // Search
 export const google = async (args: string[]): Promise<string> => {
   window.open(`https://google.com/search?q=${args.join(' ')}`);
+  return `Searching google for ${args.join(' ')}...`;
+};
+
+export const youtube = async (args: string[]): Promise<string> => {
+  window.open(`https://www.youtube.com/results?search_query=${args.join(' ')}`);
   return `Searching google for ${args.join(' ')}...`;
 };
 
@@ -101,11 +127,13 @@ export const whoami = async (args: string[]): Promise<string> => {
 };
 
 export const ls = async (args: string[]): Promise<string> => {
-  return `a
-bunch
-of
-fake
-directories`;
+  return `alguns
+repositorios
+que 
+nunca
+vão
+existir
+  `;
 };
 
 export const cd = async (args: string[]): Promise<string> => {
@@ -117,39 +145,53 @@ export const date = async (args: string[]): Promise<string> => {
   return new Date().toString();
 };
 
-export const vi = async (args: string[]): Promise<string> => {
-  return `woah, you still use 'vi'? just try 'vim'.`;
-};
-
-export const vim = async (args: string[]): Promise<string> => {
-  return `'vim' is so outdated. how about 'nvim'?`;
-};
-
-export const nvim = async (args: string[]): Promise<string> => {
-  return `'nvim'? too fancy. why not 'emacs'?`;
-};
-
-export const emacs = async (args?: string[]): Promise<string> => {
-  return `you know what? just use vscode.`;
-};
-
 export const sudo = async (args?: string[]): Promise<string> => {
   window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank'); // ...I'm sorry
   return `Permission denied: with little power comes... no responsibility? `;
 };
 
-// Banner
+
 export const banner = (args?: string[]): string => {
   return `
-██╗  ██╗███████╗██╗   ██╗██╗███╗   ██╗    ██╗    ██╗██╗██╗     ██╗     ██╗ █████╗ ███╗   ██╗███████╗
-██║ ██╔╝██╔════╝██║   ██║██║████╗  ██║    ██║    ██║██║██║     ██║     ██║██╔══██╗████╗  ██║██╔════╝
-█████╔╝ █████╗  ██║   ██║██║██╔██╗ ██║    ██║ █╗ ██║██║██║     ██║     ██║███████║██╔██╗ ██║███████╗
-██╔═██╗ ██╔══╝  ╚██╗ ██╔╝██║██║╚██╗██║    ██║███╗██║██║██║     ██║     ██║██╔══██║██║╚██╗██║╚════██║
-██║  ██╗███████╗ ╚████╔╝ ██║██║ ╚████║    ╚███╔███╔╝██║███████╗███████╗██║██║  ██║██║ ╚████║███████║
-╚═╝  ╚═╝╚══════╝  ╚═══╝  ╚═╝╚═╝  ╚═══╝     ╚══╝╚══╝ ╚═╝╚══════╝╚══════╝╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝
+  <div style="
+    display: inline-flex; 
+    align-items: center; 
+    gap: 10px; 
+    flex-wrap: wrap;
+  ">
+    <img src="../../../profile.jpeg" style="
+      width: 15vw; 
+      clip-path: circle(45%);
+      min-width: 100px;
+    ">
+    <pre style="
+      font-size: 1vw;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      margin: 0;
+    ">
+██╗  ██╗███████╗██╗   ██╗██╗███╗   ██╗   
+██║ ██╔╝██╔════╝██║   ██║██║████╗  ██║    
+█████╔╝ █████╗  ██║   ██║██║██╔██╗ ██║    
+██╔═██╗ ██╔══╝  ╚██╗ ██╔╝██║██║╚██╗██║   
+██║  ██╗███████╗ ╚████╔╝ ██║██║ ╚████║    
+╚═╝  ╚═╝╚══════╝  ╚═══╝  ╚═╝╚═╝  ╚═══╝     
+    </pre>
+  </div>
+  <p>Escreva 'help' para ver a lista de comandos disponíveis.</p>
+  <p>Escreva 'sumfetch' para mostrar um Sumário.</p>
+  <p>Escreva 'about' para saber o que existe aqui.</p>
+  <p>Escreva 'repo' ou clique <u><a class="text-light-blue dark:text-dark-blue underline" href="\${config.repo}" target="_blank">aqui</a></u> para ir ao GitHub.</p>
+  <style>
+    @media (max-width: 600px) {
+      pre {
+        font-size: 3vw;
+      }
+      img {
+        width: 25vw;
+      }
+    }
 
-Type 'help' to see the list of available commands.
-Type 'sumfetch' to display summary.
-Type 'repo' or click <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.repo}" target="_blank">here</a></u> for the Github repository.
-`;
+  </style>
+  `;
 };
