@@ -388,7 +388,11 @@ ferramentas, tenho conhecimento com <b>Angular</b>, <b>React</b>, <b>NodeJs</b>,
 <b>TypeScript</b>, <b>PHP</b>, <b>SQL</b>, <b>MySQL</b>, <b>PostgreSQL</b>, <b>HTML</b>, <b>CSS</b>, <b>SCSS</b>.
 Integrações de APIs de terceiros, implementação de arquiteturas backend e frontend, layouts em HTML e CSS.
 Conhecimento em controle de versão Git
-  <p>Escreva 'help' para ver a lista de comandos disponíveis.</p>
+
+Atualmete trabalho como jovem aprendiz em manutençao de computadores e trabalho como freelancer na criação de aplicações web
+
+Um pouco dos comandos do site
+  <p>Escreva 'help' para ver a lista todos os comandos disponíveis.</p>
   <p>Escreva 'sumfetch' para mostrar um Sumário.</p>
   <p>Escreva 'about' para saber o que existe aqui.</p>
   <p>Escreva 'repo' ou clique <u><a class="text-light-blue dark:text-dark-blue underline" href="\${config.repo}" target="_blank">aqui</a></u> para ir ao GitHub.</p>
