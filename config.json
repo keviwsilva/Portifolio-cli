@@ -1,17 +1,17 @@
 {
   "readmeUrl": "https://raw.githubusercontent.com/cveinnt/cveinnt/master/README.md",
-  "title": "LiveTerm",
-  "name": "John Doe",
-  "ascii": "liveterm",
+  "title": "Kevin Willians",
+  "name": "Kevin Willians",
+  "ascii": "Kevin Willians Monteiro Silva",
   "social": {
-    "github": "github",
-    "linkedin": "linkedin"
+    "github": "keviwsilva",
+    "linkedin": "kevin-willians-monteiro-silva-0b096622b"
   },
-  "email": "contact@email.com",
-  "ps1_hostname": "liveterm",
+  "email": "kwms1345@gmail.com",
+  "ps1_hostname": "Kevin Willians Monteiro Silva",
   "ps1_username": "visitor",
-  "repo": "https://github.com/Cveinnt/LiveTerm",
-  "resume_url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Resume.pdf",
+  "repo": "https://github.com/keviwsilva",
+  "resume_url": "public/Kevin Willians exp-CV-program.pdf",
   "donate_urls": {
     "paypal": "https://paypal.me/cveinnt",
     "patreon": "https://patreon.com/cveinnt"
