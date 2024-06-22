@@ -390,6 +390,7 @@ Integrações de APIs de terceiros, implementação de arquiteturas backend e fr
 Conhecimento em controle de versão Git
 
 Atualmete trabalho como jovem aprendiz em manutençao de computadores e trabalho como freelancer na criação de aplicações web
+tanto frontend e tanto backend.
 
 Um pouco dos comandos do site
   <p>Escreva 'help' para ver a lista todos os comandos disponíveis.</p>
